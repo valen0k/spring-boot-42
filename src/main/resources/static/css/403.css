@@ -1,0 +1,98 @@
+:root {
+    --background: #34373d;
+
+    --eye-back: #e8e8e8;
+    --eye-iris: #f26964;
+    --eye-pupil: #202020;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    width:100px;
+    padding:10px;
+    margin-top: 40px;
+    border-radius: 50px;
+    border:0;
+    background:#f26964;
+    font-size:1.2em;
+    color:#fff;
+    text-shadow:1px 1px 0 rgba(0,0,0,.1);
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+
+    color: #FFFFFF;
+    font-family: 'Lato', sans-serif;
+}
+
+.Content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.Content-item {
+    margin-bottom: 5vh;
+}
+
+#eye-back {
+    fill: var(--eye-back);
+}
+
+#eye-iris {
+    fill: var(--eye-iris);
+    animation: eyemove 5s ease infinite;
+}
+
+#eye-pupil {
+    fill: var(--eye-pupil);
+    animation: eyemove 5s ease infinite;
+}
+
+.Content-item {
+    text-align: center;
+}
+
+.title {
+    font-size: calc(16px + 2vmin);
+    font-weight: 700;
+}
+
+.desc {
+    font-size: calc(12px + 0.8vmin);
+}
+
+@keyframes eyemove {
+    0% {
+        cx: 100px;
+    }
+    17.5% {
+        cx: 50px;
+    }
+    27.5% {
+        cx: 50px;
+    }
+    62.5% {
+        cx: 150px;
+    }
+    72.5% {
+        cx: 150px;
+    }
+    90% {
+        cx: 100px;
+    }
+    100% {
+        cx: 100px;
+    }
+}

@@ -1,0 +1,303 @@
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+form {
+    background: #fff;
+    border-radius: 6px;
+    padding: 30px 20px 20px;
+    width: 300px;
+    margin: 70px auto;
+}
+
+input {
+    width:100%;
+    background:#f5f5f5;
+    padding:12px;
+    border-radius:6px;
+    margin-bottom:10px;
+    border:1px solid #eee;
+}
+
+input.invalid{
+    border-color: #ff6565;
+}
+
+input:focus,
+input:focus.invalid,
+textarea:focus {
+    outline: none;
+}
+
+label,
+select,
+button,
+input[type="submit"],
+input[type="radio"],
+input[type="checkbox"]
+input[type="button"] {
+    cursor: pointer;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+::selection {
+    background: #ed327b;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #ed327b;
+    color: #fff;
+}
+
+* {
+    font-family: 'Lato', sans-serif;
+    font-size:100%;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    background: #f6f0ee;
+}
+
+.btn {
+    position:relative;
+    width:100%;
+    padding:12px;
+    border-radius:6px;
+    border:0;
+    background:#f26964;
+    font-size:1.2em;
+    color:#fff;
+    text-shadow:1px 1px 0 rgba(0,0,0,.1);
+}
+
+.btn:active {
+    top:3px;
+    box-shadow:none;
+}
+
+.btn:hover {
+    background-color: #ff726d;
+    transition: all 0.3s ease;
+}
+
+h1 {
+    text-align:center;
+    font-size:1.4em;
+    font-weight:700;
+    color:#ccc;
+    margin-bottom:24px;
+}
+
+h5 {
+    text-align:center;
+    margin-top:5px;
+    color:rgba(0,0,0,.3);
+}
+
+h5 > a,a:visited {
+    color:#fff;
+    text-decoration:underline;
+}
+
+h5 > a:hover {
+    text-decoration:none;
+}
+
+h6 {
+    text-align:center;
+    padding: 24px 12px 12px;
+    color:#777;
+    cursor:pointer;
+}
+
+h6:hover {
+    color: #f26964;
+}
+
+.notifyS,
+.notifyF,
+.notifyL,
+.notifyX {
+    position: absolute;
+    top: 10px;
+    left: calc(50% - 150px);
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 6px;
+    height: 0;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    transition: height .2s;
+}
+
+.notifyX {
+    color: rgb(0 0 0 / 80%);
+    background: rgb(255 216 66 / 60%);
+}
+
+.notifyF {
+    background: rgba(213, 0, 0, 0.6);
+}
+
+.notifyS {
+    background: rgba(21, 201, 0, 0.6);
+}
+
+.notifyL {
+    background: rgba(107, 107, 107, 0.6);
+}
+
+#notifyTypeS:before,
+#notifyTypeF:before,
+#notifyTypeL:before {
+    display: block;
+    margin-top: 15px;
+
+}
+
+#notifyTypeX:before {
+    display: block;
+    margin-top: 7px;
+    margin-left: 15px;
+    margin-right: 15px
+}
+
+.active{
+    height: 50px;
+}
+
+/* Customize the label (the container) */
+.label-container {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.label-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: #eee;
+}
+
+/* When the checkbox is checked, add a blue background */
+.label-container input:checked ~ .checkmark {
+    background-color: #f26964;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.label-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.label-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 3px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.fail-prompt {
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 294px;
+    color: #ff0900;
+    font-weight: 300;
+    font-size: 15px;
+    white-space: pre-line;
+}
+
+button:disabled,
+button[disabled]{
+    pointer-events: none;
+    background-color: #ffb5b2;
+    text-shadow: none;
+}
+
+
+
+
+.forms {
+    margin-top: 40px;
+}
+
+/* added to global styles */
+.has-error.form-control {
+    color: #9f005b;
+    border-color: #9f005b;
+    box-shadow: inset 0 0 0 1px #9f005b;
+}
+
+.has-error.form-control:focus {
+    box-shadow: inset 0 0 0 2px #9f005b;
+}
+
+/* for example purposes - floating labels needed to properly work */
+#phone-number-country {
+    color: #000;
+}

@@ -1,0 +1,230 @@
+body {
+    background: #f6f0ee;
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.header {
+    min-height: 40vh;
+    background: linear-gradient(to right, #d53369, #cbad6d);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details {
+    text-align: center;
+}
+
+.profile-pic {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.location p {
+    display: inline-block;
+}
+
+/*.location svg {*/
+/*    vertical-align: middle;*/
+/*}*/
+
+h1 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+form.hide-submit input[type="submit"] { display: none;}
+
+svg.bi.bi-box-arrow-left {
+    position: fixed;
+    top: 4%;
+    right: 2.5%;
+    cursor: pointer;
+    fill: rgba(255, 255, 255, 0.7);
+}
+
+.generalTable {
+    display: flex;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    padding: 0;
+    border-spacing: 0;
+    border: 0;
+
+}
+.tbl-header{
+    background-color: rgba(255,255,255,0.3);
+}
+.tbl-content{
+    height:300px;
+    overflow-x:auto;
+    margin-top: 0;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    background: lightcoral;
+}
+td{
+    padding: 15px;
+    text-align: center;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 12px;
+    color: black;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+/********************************************/
+
+.camera-icon {
+    position: absolute;
+    left: 42%;
+    top: 42%;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transform: translateZ(0);
+    transition: border-color 200ms;
+    -webkit-box-shadow: 0px 0px 41px 5px rgba(34, 60, 80, 0.44);
+    -moz-box-shadow: 0px 0px 41px 5px rgba(34, 60, 80, 0.44);
+    box-shadow: 0px 0px 41px 5px rgba(34, 60, 80, 0.44);
+}
+
+.avatar:hover .avatar_upload, .avatar--hover .avatar_upload{
+    opacity: 1;
+}
+
+.avatar:hover .upload_label, .avatar--hover .upload_label {
+    display: block;
+}
+
+.avatar--upload-error {
+    border-color: #F73C3C;
+    animation: shakeNo 300ms 1 forwards;
+}
+
+#preview::after {
+    content: 'Loading...';
+    display: block;
+    position: absolute;
+    left: 34%;
+    top: 16%;
+    z-index: -1;
+    line-height: 150px;
+    color: white;
+}
+
+img {
+    min-width: 200px;
+    min-height: 200px;
+    object-fit: cover;
+}
+
+.avatar_img--loading {
+    opacity: 0;
+}
+
+.avatar_img {
+    width: 100%;
+    height: auto;
+    animation: inPop 250ms 150ms 1 forwards cubic-bezier(0.175, 0.885, 0.32, 1.175);
+    transform: scale(0);
+    opacity: 0;
+}
+
+.avatar_upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 100%;
+    background: rgba(56, 56, 56, 0.6);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.upload_label {
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    animation: popDown 300ms 1 forwards;
+    transform: translateY(-10px);
+    opacity: 0;
+    display: none;
+    transition: background 200ms, color 200ms;
+}
+
+#upload {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+    display: none;
+    text-align: center;
+}
+
+/*****************************************************************/
+
+@keyframes shakeNo {
+    20%, 60%{
+        transform: translateX(6px);
+    }
+    40%, 80%{
+        transform: translate(-6px);
+    }
+}
+
+@keyframes popDown{
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes inPop {
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
