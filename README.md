@@ -84,7 +84,7 @@ When clicking on the link, a user gets a page where they can log into their pers
 Email submission shall be implemented using org.springframework.mail.javamail.JavaMailSender.
 
 Note:
-* To send an email, you need to use an existing mailbox, e.g., Gmail. SMTP settings for example@gmail.com mailbox with school21 password:
+* To send an email, you need to use an existing mailbox, e.g., Gmail. SMTP settings for example@gmail.com mailbox with example password:
 
 ```properties
 spring.mail.host=smtp.gmail.com
